@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCrema">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar Alumno"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAzul"
+        android:paddingBottom="12dp" />
+
+    <EditText
+        android:id="@+id/etCiAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CI del alumno"
+        android:inputType="number"
+        android:backgroundTint="@color/colorGuindo" />
+
+    <EditText
+        android:id="@+id/etNombresAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombres"
+        android:inputType="textCapWords"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorGuindo" />
+
+    <EditText
+        android:id="@+id/etApellidosAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellidos"
+        android:inputType="textCapWords"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorGuindo" />
+
+    <EditText
+        android:id="@+id/etFechaNacimientoAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha nacimiento (dd/MM/yyyy)"
+        android:focusable="false"
+        android:clickable="true"
+        android:inputType="none"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorGuindo" />
+
+    <Button
+        android:id="@+id/btnCrearAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:layout_marginTop="14dp"
+        android:background="@color/colorGuindo"
+        android:textColor="@color/colorCrema" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAzul"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Alumno"
+        android:textSize="18sp"
+        android:textColor="@color/colorAzul"
+        android:textStyle="bold"
+        android:paddingTop="16dp" />
+
+    <EditText
+        android:id="@+id/etBuscarAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar por CI o nombre"
+        android:backgroundTint="@color/colorGuindo" />
+
+    <Button
+        android:id="@+id/btnBuscarAlumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAzul"
+        android:textColor="@color/colorCrema" />
+
+    <include
+        android:id="@+id/paginationTop"
+        layout="@layout/pagination_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAlumnos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <include
+        android:id="@+id/paginationBottom"
+        layout="@layout/pagination_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/colorCrema">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar Materia"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAzul"
+        android:paddingBottom="12dp" />
+
+    <EditText
+        android:id="@+id/etNombreMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la materia"
+        android:backgroundTint="@color/colorGuindo" />
+
+    <Button
+        android:id="@+id/btnCrearMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Crear"
+        android:background="@color/colorGuindo"
+        android:textColor="@color/colorCrema" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAzul"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Materia"
+        android:textSize="18sp"
+        android:textColor="@color/colorAzul"
+        android:textStyle="bold"
+        android:paddingTop="16dp"/>
+
+    <EditText
+        android:id="@+id/etBuscarMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese texto"
+        android:backgroundTint="@color/colorGuindo" />
+
+    <Button
+        android:id="@+id/btnBuscarMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Buscar"
+        android:background="@color/colorAzul"
+        android:textColor="@color/colorCrema" />
+
+    <include
+        android:id="@+id/paginationTop"
+        layout="@layout/pagination_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMaterias"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"/>
+
+    <include
+        android:id="@+id/paginationBottom"
+        layout="@layout/pagination_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

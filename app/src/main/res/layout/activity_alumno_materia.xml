@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCrema">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asignar Alumno a Materia"
+            android:textColor="@color/colorAzul"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:paddingBottom="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione Alumno"
+            android:textColor="@color/colorAzul"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spAlumnoAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione Materia"
+            android:textColor="@color/colorAzul"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spMateriaAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnAsignarAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asignar"
+            android:textColor="@color/colorCrema"
+            android:background="@color/colorGuindo"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAzul"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:textColor="@color/colorAzul"
+            android:textStyle="bold"
+            android:paddingTop="14dp"/>
+
+        <EditText
+            android:id="@+id/etBuscarAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buscar por alumno o materia"
+            android:backgroundTint="@color/colorGuindo"/>
+
+        <Button
+            android:id="@+id/btnBuscarAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:background="@color/colorAzul"
+            android:textColor="@color/colorCrema"
+            android:layout_marginTop="10dp"/>
+
+        <include
+            android:id="@+id/paginationTop"
+            layout="@layout/pagination_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"/>
+
+        <include
+            android:id="@+id/paginationBottom"
+            layout="@layout/pagination_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</ScrollView>

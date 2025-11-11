@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCrema">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar Tarea"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAzul"
+            android:paddingBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etTituloTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título de la tarea"
+            android:backgroundTint="@color/colorGuindo" />
+
+        <EditText
+            android:id="@+id/etFechaEntregaTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha Entrega (dd/MM/yyyy)"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorGuindo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione Materia"
+            android:textColor="@color/colorAzul"
+            android:textStyle="bold"
+            android:paddingTop="12dp"/>
+
+        <Spinner
+            android:id="@+id/spMateriasTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorCrema"/>
+
+        <Button
+            android:id="@+id/btnCrearTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear Tarea"
+            android:layout_marginTop="14dp"
+            android:background="@color/colorGuindo"
+            android:textColor="@color/colorCrema"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAzul"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Tarea por Título"
+            android:textColor="@color/colorAzul"
+            android:textStyle="bold"
+            android:paddingTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etBuscarTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Texto a buscar"
+            android:backgroundTint="@color/colorGuindo"/>
+
+        <Button
+            android:id="@+id/btnBuscarTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAzul"
+            android:textColor="@color/colorCrema"/>
+
+        <include
+            android:id="@+id/paginationTop"
+            layout="@layout/pagination_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTareas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp" />
+
+        <include
+            android:id="@+id/paginationBottom"
+            layout="@layout/pagination_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</ScrollView>

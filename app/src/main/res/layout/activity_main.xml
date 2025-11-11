@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorCrema"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Botones de Navegación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/btnIrAlumno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ALUMNOS"
+            android:background="@color/colorGuindo"
+            android:textColor="@color/colorCrema"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnIrMateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MATERIAS"
+            android:background="@color/colorGuindo"
+            android:textColor="@color/colorCrema"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnIrTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TAREAS"
+            android:background="@color/colorAzul"
+            android:textColor="@color/colorCrema"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnIrAlumnoMateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ASIGNAR ALUMNO → MATERIA"
+            android:background="@color/colorAzul"
+            android:textColor="@color/colorCrema"/>
+    </LinearLayout>
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listado Completo"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAzul"
+        android:gravity="center"
+        android:paddingBottom="10dp"/>
+
+    <!-- Buscador -->
+    <EditText
+        android:id="@+id/etBuscarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar alumno, materia o tarea"
+        android:backgroundTint="@color/colorGuindo"
+        android:padding="10dp"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnBuscarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:background="@color/colorAzul"
+        android:textColor="@color/colorCrema"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Recycler principal -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
